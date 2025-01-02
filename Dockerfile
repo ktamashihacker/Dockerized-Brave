@@ -1,7 +1,5 @@
 FROM ubuntu:24.04
 
-LABEL maintainer= William .
-
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y x11vnc curl sudo xvfb && \
