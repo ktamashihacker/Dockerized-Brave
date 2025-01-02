@@ -1,7 +1,6 @@
 FROM ubuntu:24.04
 
 LABEL maintainer= William .
-RUN apt
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list && \
     apt-get update && \
@@ -11,7 +10,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 
 RUN x11vnc -storepasswd "devopsil" ~/.vnc/passwd
 
-RUN 
+RUN curl -fsS https://dl.brave.com/install.sh | sh
 
 RUN sh -c 'echo "brave-browser" >> ~/.bashrc'
 
