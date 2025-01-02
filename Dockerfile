@@ -12,6 +12,8 @@ RUN x11vnc -storepasswd "devopsil" ~/.vnc/passwd
 
 RUN curl -fsS https://dl.brave.com/install.sh | sh
 
+EXPOSE 5800
+
 RUN sh -c 'echo "brave-browser" >> ~/.bashrc'
 
 CMD ["/usr/bin/x11vnc", "-usepw", "-create"]
